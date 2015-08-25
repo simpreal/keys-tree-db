@@ -1,0 +1,17 @@
+{
+  "name": "simpreal/keys-tree-db",
+  "description": "PHP nosql db for store tree of integer keys in file",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "simpreal",
+      "email": "simpreal@mail.ru"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "KeysTreeDB": "src/"
+    }
+  }
+}
