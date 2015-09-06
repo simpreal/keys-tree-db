@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: anatoliysa
- * Date: 8/12/2015
- * Time: 2:48 PM
- */
 
-namespace Interfaces\IdRelations;
+namespace KeysTreeDB;
 
 
 class FileStorage implements StorageInterface {

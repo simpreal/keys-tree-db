@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: anatoliysa
- * Date: 8/14/2015
- * Time: 3:50 PM
- */
 
-namespace Interfaces\IdRelations;
+namespace KeysTreeDB;
 
 
 class RootNodes extends AbstractNodes {

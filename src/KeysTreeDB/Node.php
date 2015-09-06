@@ -1,6 +1,6 @@
 <?php
 
-namespace Interfaces\IdRelations;
+namespace KeysTreeDB;
 
 class Node{
 
