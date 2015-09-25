@@ -30,14 +30,15 @@ class Node{
 
 
     public function unpack($data){
-        $arr= array_values(unpack('I*', $data));
-        if(count($arr)===6) {
-            list($this->left, $this->right, $this->level, $this->key, $this->valueType, $this->value) = $arr;
-        }
-        else{
-            var_dump(strlen($data));
-            var_dump($arr);
-        }
+        static $f= 'I5';
+        $arr=unpack($f, $data);
+        $this->left = $arr[1];
+        $this->right = $arr[2];
+        $this->key =$arr[3];
+        $this->value = $arr[4];
+        $this->level = $arr[5]&0xFFFF;
+        $this->valueType = $arr[5]>>16;
+
         $this->leftNode = null;
         $this->rightNode = null;
     }
@@ -49,10 +50,10 @@ class Node{
         return pack('I*',
             $left,
             $right,
-            $this->level,
             $this->key,
-            $this->valueType,
-            $value
+            $value,
+            $this->level + ($this->valueType<<16)
+
         );
 
     }

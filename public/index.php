@@ -1,7 +1,10 @@
 <?php
 
 require_once __DIR__ . '/../vendor/autoload.php'; // Autoload files using Composer autoload
+if(isset($_GET['create'])){
 
+
+}
 $rel = new \KeysTreeDB\RootNodes(new \KeysTreeDB\FileStorage(__DIR__."/zzz.txt"));
 $s=[];
 $s[]=time();
